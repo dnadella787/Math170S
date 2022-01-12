@@ -54,8 +54,6 @@ class empirical:
         a = np.array(self.arr)
         return ((lower < a) & (a < upper)).sum()
 
-        
-
     def five_num_summary(self):
         self.arr.sort()
 
@@ -119,18 +117,18 @@ class empirical:
 
 
 if __name__ == "__main__":
-    # arr61_4 = []
-    # input61_4 = open("input6_4.txt", 'r')
-    # for line in input61_4:
-    #     for word in line.split():
-    #         arr61_4.append(float(word))
+    arr61_4 = []
+    input61_4 = open("input6_4.txt", 'r')
+    for line in input61_4:
+        for word in line.split():
+            arr61_4.append(float(word))
 
-    # print("problem 6.1-4")
-    # d = empirical(arr61_4)
-    # d.print()
-    # d.print_histogram_norm(1, '6_1-4')
-    # print("count within 1 standard deviation: {0}".format(d.count(d.mean() - d.sample_std_dev(), d.mean() + d.sample_std_dev())))
-    # print("count within 2 standard deviations: {0}".format(d.count(d.mean() - 2 * d.sample_std_dev(), d.mean() + 2 * d.sample_std_dev())))
+    print("problem 6.1-4")
+    d = empirical(arr61_4)
+    d.print()
+    d.print_histogram_norm(1, '6_1-4')
+    print("count within 1 standard deviation: {0}".format(d.count(d.mean() - d.sample_std_dev(), d.mean() + d.sample_std_dev())))
+    print("count within 2 standard deviations: {0}".format(d.count(d.mean() - 2 * d.sample_std_dev(), d.mean() + 2 * d.sample_std_dev())))
 
     arr62_8 = []
     input62_5 = open("input62_8.txt", 'r')
