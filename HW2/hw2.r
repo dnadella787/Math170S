@@ -4,9 +4,11 @@ x <- c(32.0, 30.0, 26.0, 23.0, 17.0, 16.0, 23.0, 20.0, 21.0, 23.0, 17.0, 24.0, 2
 y <- c(28.0, 27.0, 32.0, 25.0, 23.0, 22.0, 24.0, 30.0, 28.0, 32.0, 18.0, 31.0, 31.0, 18.0, 26.0)
 
 lm1 <- lm(y ~ x)
+print(lm1)
+
 
 # part b 
-
+jpeg(file="65_5.jpeg")
 plot(x, y,
 	pch = 16,
 	cex = 1.3, 
@@ -16,10 +18,13 @@ plot(x, y,
 	ylab = "Natural Science Score")
 
 abline(14.6578, 0.5062)
+dev.off()
+
 
 # part c 
 
 sigma_squared <- sum(residuals(lm1)^2/length(x))
+cat(sprintf("sigma^2 : %.7f \n", sigma_squared))
 
 # useful resources:
 # how to get residuals:
