@@ -7,7 +7,6 @@ if __name__ == "__main__":
         for num in line.split():
             arr.append(int(num))
 
-
     p_hat = len(arr)/sum(arr)
     print("point estimator for p: {0}".format(p_hat))
 
