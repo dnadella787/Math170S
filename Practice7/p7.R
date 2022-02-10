@@ -8,7 +8,7 @@ s = sd(x)
 n = length(x)
 alpha = 0.05
 zalpha = qnorm(1-alpha/2)
-epsilon = zalpha * (s/sqrt(length(x)))
+epsilon = zalpha * (s/sqrt(n))
 
 sprintf("x_bar : %.9f", xbar)
 sprintf("s : %.9f", s)

@@ -24,3 +24,6 @@ talpha = qt(1-alpha, n-1)
 epsilon = talpha * s / sqrt(n)
 
 sprintf("abar-epsilon : %.9f", abar-epsilon)
+
+# there are also tables in practice 7 for this type of thing (t distribution)
+
