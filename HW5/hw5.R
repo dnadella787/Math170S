@@ -29,9 +29,11 @@ sprintf("portion less than 6 : %.9f", p)
 
 alpha = 0.05
 epsilon = 0.04
-z = qnorm(1-0.5/2)
+z = qnorm(1-alpha/2)
 p = 0.15
-n = z^2 * p * (1 - p)/epsilon^2
+N = 1000
+m = ceiling(z^2 * p * (1 - p)/epsilon^2)
+n = m / (1 + (m-1)/N)
 
 sprintf("weld inspections needed : %.9f", n)
 
