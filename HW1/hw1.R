@@ -39,7 +39,7 @@ d <- c(102.0, 106.3, 106.6, 108.8, 107.7, 106.1, 105.9, 106.7, 106.8, 110.2, 101
 d <- sort(d)
 
 # part b
-index<-.25 * (length(d) + 1)
+index <-.25 * (length(d) + 1)
 if (index%%1 > 0){
 	rem <- index%%1;
 	ind <- index%/%1;
